@@ -12,6 +12,7 @@
 		729896221DF7A63300D7FEB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 729896201DF7A63300D7FEB2 /* Main.storyboard */; };
 		729896241DF7A63300D7FEB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729896231DF7A63300D7FEB2 /* Assets.xcassets */; };
 		729896271DF7A63300D7FEB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 729896251DF7A63300D7FEB2 /* LaunchScreen.storyboard */; };
+		AE0217D449F2BD3CBCA8BD43 /* Pods_DYZB_ZW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38264DC9A397AC52A29A84D /* Pods_DYZB_ZW.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		729896231DF7A63300D7FEB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		729896261DF7A63300D7FEB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		729896281DF7A63300D7FEB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96F642FF3DE59CAE9EEC715B /* Pods-DYZB_ZW.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB_ZW.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB_ZW/Pods-DYZB_ZW.debug.xcconfig"; sourceTree = "<group>"; };
+		E6B5D22EC8CB4E98296E4E45 /* Pods-DYZB_ZW.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB_ZW.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB_ZW/Pods-DYZB_ZW.release.xcconfig"; sourceTree = "<group>"; };
+		F38264DC9A397AC52A29A84D /* Pods_DYZB_ZW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYZB_ZW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE0217D449F2BD3CBCA8BD43 /* Pods_DYZB_ZW.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1574068C9A782E6DD538D1B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				96F642FF3DE59CAE9EEC715B /* Pods-DYZB_ZW.debug.xcconfig */,
+				E6B5D22EC8CB4E98296E4E45 /* Pods-DYZB_ZW.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		362B61F7648CD3E897FA4978 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F38264DC9A397AC52A29A84D /* Pods_DYZB_ZW.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		729896101DF7A63300D7FEB2 = {
 			isa = PBXGroup;
 			children = (
 				7298961B1DF7A63300D7FEB2 /* DYZB_ZW */,
 				7298961A1DF7A63300D7FEB2 /* Products */,
+				1574068C9A782E6DD538D1B4 /* Pods */,
+				362B61F7648CD3E897FA4978 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +78,7 @@
 		7298961B1DF7A63300D7FEB2 /* DYZB_ZW */ = {
 			isa = PBXGroup;
 			children = (
+				72D9E2701F28468C00FED4A4 /* Classes */,
 				7298961C1DF7A63300D7FEB2 /* AppDelegate.swift */,
 				7298961E1DF7A63300D7FEB2 /* ViewController.swift */,
 				729896201DF7A63300D7FEB2 /* Main.storyboard */,
@@ -64,6 +89,253 @@
 			path = DYZB_ZW;
 			sourceTree = "<group>";
 		};
+		72D9E2701F28468C00FED4A4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				72D9E2711F28468C00FED4A4 /* Follow */,
+				72D9E2761F28468C00FED4A4 /* Live */,
+				72D9E27B1F28468C00FED4A4 /* Main */,
+				72D9E2801F28468C00FED4A4 /* Profile */,
+				72D9E2851F28468C00FED4A4 /* Room */,
+				72D9E28A1F28468C00FED4A4 /* Tool */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		72D9E2711F28468C00FED4A4 /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+				72D9E2721F28468C00FED4A4 /* Controller */,
+				72D9E2731F28468C00FED4A4 /* Model */,
+				72D9E2741F28468C00FED4A4 /* View */,
+				72D9E2751F28468C00FED4A4 /* ViewModel */,
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		72D9E2721F28468C00FED4A4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		72D9E2731F28468C00FED4A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		72D9E2741F28468C00FED4A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72D9E2751F28468C00FED4A4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		72D9E2761F28468C00FED4A4 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				72D9E2771F28468C00FED4A4 /* Controller */,
+				72D9E2781F28468C00FED4A4 /* Model */,
+				72D9E2791F28468C00FED4A4 /* View */,
+				72D9E27A1F28468C00FED4A4 /* ViewModel */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		72D9E2771F28468C00FED4A4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		72D9E2781F28468C00FED4A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		72D9E2791F28468C00FED4A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72D9E27A1F28468C00FED4A4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		72D9E27B1F28468C00FED4A4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				72D9E27C1F28468C00FED4A4 /* Controller */,
+				72D9E27D1F28468C00FED4A4 /* Model */,
+				72D9E27E1F28468C00FED4A4 /* View */,
+				72D9E27F1F28468C00FED4A4 /* ViewModel */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		72D9E27C1F28468C00FED4A4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		72D9E27D1F28468C00FED4A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		72D9E27E1F28468C00FED4A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72D9E27F1F28468C00FED4A4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		72D9E2801F28468C00FED4A4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				72D9E2811F28468C00FED4A4 /* Controller */,
+				72D9E2821F28468C00FED4A4 /* Model */,
+				72D9E2831F28468C00FED4A4 /* View */,
+				72D9E2841F28468C00FED4A4 /* ViewModel */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		72D9E2811F28468C00FED4A4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		72D9E2821F28468C00FED4A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		72D9E2831F28468C00FED4A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72D9E2841F28468C00FED4A4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		72D9E2851F28468C00FED4A4 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				72D9E2861F28468C00FED4A4 /* Controller */,
+				72D9E2871F28468C00FED4A4 /* Model */,
+				72D9E2881F28468C00FED4A4 /* View */,
+				72D9E2891F28468C00FED4A4 /* ViewModel */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		72D9E2861F28468C00FED4A4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		72D9E2871F28468C00FED4A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		72D9E2881F28468C00FED4A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72D9E2891F28468C00FED4A4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		72D9E28A1F28468C00FED4A4 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				72D9E28B1F28468C00FED4A4 /* Controller */,
+				72D9E28C1F28468C00FED4A4 /* Model */,
+				72D9E28D1F28468C00FED4A4 /* View */,
+				72D9E28E1F28468C00FED4A4 /* ViewModel */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		72D9E28B1F28468C00FED4A4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		72D9E28C1F28468C00FED4A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		72D9E28D1F28468C00FED4A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72D9E28E1F28468C00FED4A4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +343,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7298962B1DF7A63300D7FEB2 /* Build configuration list for PBXNativeTarget "DYZB_ZW" */;
 			buildPhases = (
+				812FD247EA68E51AC9CED610 /* [CP] Check Pods Manifest.lock */,
 				729896151DF7A63300D7FEB2 /* Sources */,
 				729896161DF7A63300D7FEB2 /* Frameworks */,
 				729896171DF7A63300D7FEB2 /* Resources */,
+				4DD9C5FF64B702EBCED970BA /* [CP] Embed Pods Frameworks */,
+				1BBC6B9D1520FB31616F2EA6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +406,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BBC6B9D1520FB31616F2EA6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DYZB_ZW/Pods-DYZB_ZW-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DD9C5FF64B702EBCED970BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DYZB_ZW/Pods-DYZB_ZW-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		812FD247EA68E51AC9CED610 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		729896151DF7A63300D7FEB2 /* Sources */ = {
@@ -257,8 +580,10 @@
 		};
 		7298962C1DF7A63300D7FEB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96F642FF3DE59CAE9EEC715B /* Pods-DYZB_ZW.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = KVL9QB8ZBZ;
 				INFOPLIST_FILE = DYZB_ZW/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -271,8 +596,10 @@
 		};
 		7298962D1DF7A63300D7FEB2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6B5D22EC8CB4E98296E4E45 /* Pods-DYZB_ZW.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = KVL9QB8ZBZ;
 				INFOPLIST_FILE = DYZB_ZW/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -302,6 +629,7 @@
 				7298962D1DF7A63300D7FEB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
