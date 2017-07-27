@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72961DA51F29DF86005B92DF /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72961DA41F29DF86005B92DF /* PageTitleView.swift */; };
+		72961DAB1F29E232005B92DF /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72961DAA1F29E232005B92DF /* Commit.swift */; };
+		72961DAD1F29E33C005B92DF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72961DAC1F29E33C005B92DF /* BaseViewController.swift */; };
 		7298961D1DF7A63300D7FEB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298961C1DF7A63300D7FEB2 /* AppDelegate.swift */; };
 		7298961F1DF7A63300D7FEB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298961E1DF7A63300D7FEB2 /* ViewController.swift */; };
 		729896241DF7A63300D7FEB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729896231DF7A63300D7FEB2 /* Assets.xcassets */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		72961DA41F29DF86005B92DF /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
+		72961DAA1F29E232005B92DF /* Commit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
+		72961DAC1F29E33C005B92DF /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		729896191DF7A63300D7FEB2 /* DYZB_ZW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB_ZW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7298961C1DF7A63300D7FEB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7298961E1DF7A63300D7FEB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				72D9E2911F286FDC00FED4A4 /* MainViewController.swift */,
+				72961DAC1F29E33C005B92DF /* BaseViewController.swift */,
 				72D9E2A01F287BF400FED4A4 /* Main.storyboard */,
 			);
 			path = Controller;
@@ -230,6 +237,7 @@
 		72D9E27E1F28468C00FED4A4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				72961DA41F29DF86005B92DF /* PageTitleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -324,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				72D9E2B71F288B3B00FED4A4 /* Extension */,
+				72961DAA1F29E232005B92DF /* Commit.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -409,7 +418,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = jyall;
 				TargetAttributes = {
 					729896181DF7A63300D7FEB2 = {
@@ -507,9 +516,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72961DAB1F29E232005B92DF /* Commit.swift in Sources */,
+				72961DA51F29DF86005B92DF /* PageTitleView.swift in Sources */,
 				72D9E2B91F288BF000FED4A4 /* UIBarButtonItem-Extension.swift in Sources */,
 				72D9E2BB1F288E5100FED4A4 /* UIColor-Extension.swift in Sources */,
 				72D9E2921F286FDC00FED4A4 /* MainViewController.swift in Sources */,
+				72961DAD1F29E33C005B92DF /* BaseViewController.swift in Sources */,
 				72D9E2BD1F288E6600FED4A4 /* NSDate-Extension.swift in Sources */,
 				7298961F1DF7A63300D7FEB2 /* ViewController.swift in Sources */,
 				7298961D1DF7A63300D7FEB2 /* AppDelegate.swift in Sources */,
@@ -549,6 +561,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -598,6 +611,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

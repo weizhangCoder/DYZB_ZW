@@ -8,10 +8,22 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+private var KTitleViewH : CGFloat = 40
+
+class HomeViewController: BaseViewController {
+    //懒加载
+    private lazy var pageTitleView :PageTitleView = {
+        let titleFrame = CGRect(x: 0, y: 0, width: KscreenW, height: KTitleViewH)
+        let titles = ["推荐", "游戏", "娱乐", "趣玩"]
+        let titleView = PageTitleView(frame: titleFrame, titles: titles)
+    
+        return titleView
+    }()//闭包
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         setupUI()
         
