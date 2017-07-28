@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,46 +22,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUy-xh-2uh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1462" y="747"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="ee8-HF-gsj">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="FbU-HV-whf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="g1W-jM-LIy"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1bi-tO-nAR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="722" y="-573"/>
-        </scene>
-        <!--Live-->
-        <scene sceneID="ZYJ-Ay-81p">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Live" id="VxJ-lV-akd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="7ns-YK-XJB"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qhs-u1-XML" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="489" y="163"/>
-        </scene>
-        <!--Follow-->
-        <scene sceneID="y9I-ZE-7Hp">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Follow" id="jT6-gA-8av" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="K67-k4-EgJ"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SRS-jG-7Mu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="526" y="913"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="IHs-hH-X4h">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="4Cp-pE-YZP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="qVK-Fs-gOr"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dNI-7a-lsx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="602" y="1718"/>
         </scene>
     </scenes>
 </document>

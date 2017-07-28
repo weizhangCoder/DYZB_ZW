@@ -12,8 +12,8 @@ private var KTitleViewH : CGFloat = 40
 
 class HomeViewController: BaseViewController {
     //懒加载
-    private lazy var pageTitleView :PageTitleView = {
-        let titleFrame = CGRect(x: 0, y: 0, width: KscreenW, height: KTitleViewH)
+    fileprivate lazy var pageTitleView :PageTitleView = {[weak self] in
+        let titleFrame = CGRect(x: 0, y:KNavBarH, width: KscreenW, height: KTitleViewH)
         let titles = ["推荐", "游戏", "娱乐", "趣玩"]
         let titleView = PageTitleView(frame: titleFrame, titles: titles)
     
@@ -46,6 +46,8 @@ extension HomeViewController{
     fileprivate func setupUI(){
         //1 设置导航栏
         setupNavigationBar()
+        //2.添加TitleView
+        view.addSubview(pageTitleView)
         
         
         

@@ -15,6 +15,7 @@ private let KScrollLineH : CGFloat = 2
 private let KNormalColor : (CGFloat,CGFloat,CGFloat) = (85,85,85)
 private let KSelectColor : (CGFloat,CGFloat,CGFloat) = (255,128,0)
 
+
 class PageTitleView: UIView {
     
     fileprivate var titles: [String]
@@ -94,7 +95,19 @@ extension PageTitleView {
     }
     
     fileprivate func setupBotttomLineAndScrollLine(){
-    
+        let bottomLine = UIView()
+        bottomLine.backgroundColor = UIColor.lightGray
+        let lineH: CGFloat = 0.5
+        bottomLine.frame = CGRect(x: 0, y: frame.height - lineH, width: frame.width, height: lineH)
+        addSubview(bottomLine)
+        
+        guard let firstLabel = titleLables.first else {
+            return;
+        }
+//        firstLabel.textColor = UIColor(r: KSelectColor.0,g: KSelectColor.1,b: KSelectColor.2)
+       firstLabel.textColor = UIColor.orange
+        scrollView.addSubview(scrollLine)
+        scrollLine.frame = CGRect(x: firstLabel.frame.origin.x, y: frame.height - KScrollLineH, width: firstLabel.frame.width, height: KScrollLineH)
     
     }
     
