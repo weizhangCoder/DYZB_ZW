@@ -26,9 +26,7 @@ class HomeViewController: BaseViewController {
         
         
         setupUI()
-        
-
-        // Do any additional setup after loading the view.
+    
     }
 
     override func didReceiveMemoryWarning() {
