@@ -8,17 +8,27 @@
 
 import UIKit
 
+// MARK:- 代理
+protocol PageTitleViewDelegate :class{
+    func pageTitleView(_ titleView :PageTitleView, selectedIndex :Int)
 
+}
 //// MARK:- 定义常量
 
+
 private let KScrollLineH : CGFloat = 2
-private let KNormalColor : (CGFloat,CGFloat,CGFloat) = (85,85,85)
-private let KSelectColor : (CGFloat,CGFloat,CGFloat) = (255,128,0)
+//private let kNormalColor : (CGFloat, CGFloat, CGFloat) = (85, 85, 85)
+//private let kSelectColor : (CGFloat, CGFloat, CGFloat) = (255, 128, 0)
+
+
+
+
 
 
 class PageTitleView: UIView {
-    
+    fileprivate var currentIndex :Int = 0
     fileprivate var titles: [String]
+    weak var delegate : PageTitleViewDelegate?
     
      // MARK:- 懒加载属性
     fileprivate lazy var titleLables : [UILabel] = [UILabel]()
@@ -87,9 +97,9 @@ extension PageTitleView {
             titleLables.append(label)
             //给label 添加手势
             label.isUserInteractionEnabled = true
-//            let tapGes = UITapGestureRecognizer(target: self, action: #selector(self)
+            let tapGes = UITapGestureRecognizer(target: self, action: #selector(self.titleLabelClick(_:)))
             
-//            label.addGestureRecognizer(tapGes)
+            label.addGestureRecognizer(tapGes)
             
         }
     }
@@ -104,7 +114,7 @@ extension PageTitleView {
         guard let firstLabel = titleLables.first else {
             return;
         }
-//        firstLabel.textColor = UIColor(r: KSelectColor.0,g: KSelectColor.1,b: KSelectColor.2)
+       firstLabel.textColor = RGBCOLOR(r: 255, 128, 0)
        firstLabel.textColor = UIColor.orange
         scrollView.addSubview(scrollLine)
         scrollLine.frame = CGRect(x: firstLabel.frame.origin.x, y: frame.height - KScrollLineH, width: firstLabel.frame.width, height: KScrollLineH)
@@ -112,5 +122,36 @@ extension PageTitleView {
     }
     
     
+
+}
+
+extension PageTitleView{
+    @objc fileprivate func titleLabelClick(_ tapGes :UITapGestureRecognizer){
+        
+        guard let currentLabel = tapGes.view as? UILabel else { return }
+        
+        if currentLabel.tag == currentIndex {
+            return
+        }
+        
+        let oldLabel = titleLables[currentIndex]
+        
+        // 3.切换文字的颜色
+        currentLabel.textColor = RGBCOLOR(r: 255, 128, 0)
+        oldLabel.textColor = RGBCOLOR(r: 85, 85, 85)
+
+        //4,.保存最新的下标
+        currentIndex = currentLabel.tag;
+        //5滚动条改变
+        let scrollLineX = CGFloat(currentIndex) * scrollLine.frame.width
+        UIView.animate(withDuration: 0.15) { 
+            self.scrollLine.frame.origin.x = scrollLineX
+        }
+        //6代理
+        delegate?.pageTitleView(self, selectedIndex: currentIndex)
+        
+        
+    
+    }
 
 }
