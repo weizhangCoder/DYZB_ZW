@@ -16,9 +16,23 @@ class HomeViewController: BaseViewController {
         let titleFrame = CGRect(x: 0, y:KNavBarH, width: KscreenW, height: KTitleViewH)
         let titles = ["推荐", "游戏", "娱乐", "趣玩"]
         let titleView = PageTitleView(frame: titleFrame, titles: titles)
-    
+        titleView.delegate = self
         return titleView
     }()//闭包
+    
+    fileprivate lazy var pageContentView:PageContentView = {
+        let pageContentFrame = CGRect(x: 0, y: self.pageTitleView.frame.origin.y + KTitleViewH, width: KscreenW, height: KscreenH - self.pageTitleView.frame.origin.y - KTitleViewH)
+        var childvcs = [UIViewController]()
+        childvcs.append(RecommendViewController())
+        childvcs.append(GameViewController())
+        childvcs.append(AmuseViewController())
+        childvcs.append(FunnyViewController())
+        
+        let pageContentVC = PageContentView(frame: pageContentFrame, childVcs: childvcs
+            , parentViewController: self)
+        
+        return pageContentVC
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,4 +80,13 @@ extension HomeViewController{
     
     }
     
+}
+
+// MARK:- PageTitleViewDelegate 代理
+extension HomeViewController :PageTitleViewDelegate{
+
+    func pageTitleView(_ titleView: PageTitleView, selectedIndex: Int) {
+        print(titleView,selectedIndex)
+    }
+
 }
