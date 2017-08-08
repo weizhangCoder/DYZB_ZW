@@ -20,18 +20,19 @@ class HomeViewController: BaseViewController {
         return titleView
     }()//闭包
     
-    fileprivate lazy var pageContentView:PageContentView = {
-        let pageContentFrame = CGRect(x: 0, y: self.pageTitleView.frame.origin.y + KTitleViewH, width: KscreenW, height: KscreenH - self.pageTitleView.frame.origin.y - KTitleViewH)
+    fileprivate lazy var pageContentView:PageContentView = { [weak self] in
+        let pageContentFrame = CGRect(x: 0, y: (self?.pageTitleView.frame.origin.y)! + KTitleViewH, width: KscreenW, height:
+            KscreenH - (self?.pageTitleView.frame.origin.y)! - KTitleViewH)
         var childvcs = [UIViewController]()
         childvcs.append(RecommendViewController())
         childvcs.append(GameViewController())
         childvcs.append(AmuseViewController())
         childvcs.append(FunnyViewController())
         
-        let pageContentVC = PageContentView(frame: pageContentFrame, childVcs: childvcs
+        let collection = PageContentView(frame: pageContentFrame, childVcs: childvcs
             , parentViewController: self)
-        
-        return pageContentVC
+        collection.delegate = self
+        return collection
     }()
 
     override func viewDidLoad() {
@@ -60,6 +61,8 @@ extension HomeViewController{
         setupNavigationBar()
         //2.添加TitleView
         view.addSubview(pageTitleView)
+        //3 ,添加ContentView
+        view.addSubview(pageContentView)
         
         
         
@@ -87,6 +90,18 @@ extension HomeViewController :PageTitleViewDelegate{
 
     func pageTitleView(_ titleView: PageTitleView, selectedIndex: Int) {
         print(titleView,selectedIndex)
+        pageContentView.setCurrentIndex(selectedIndex)
     }
 
 }
+
+
+extension HomeViewController : PageContentViewDelegate{
+    
+    func pageContentView(_ contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        
+        pageTitleView.setTitleWithProgress(progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+    }
+}
+
+
