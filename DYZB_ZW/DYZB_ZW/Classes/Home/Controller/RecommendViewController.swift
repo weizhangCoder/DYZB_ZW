@@ -8,14 +8,27 @@
 
 import UIKit
 
-class RecommendViewController: UIViewController {
 
+
+
+
+
+class RecommendViewController: BaseAnchorViewController{
+    
+    
+    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.red
-
-        // Do any additional setup after loading the view.
+     
+        
+        
     }
+    
+    
+ 
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -34,3 +47,33 @@ class RecommendViewController: UIViewController {
     */
 
 }
+
+
+extension RecommendViewController :UICollectionViewDelegateFlowLayout{
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if indexPath.section == 1 {
+            let prettyCell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath) as! CollectionPrettyCell
+            
+            return prettyCell
+        } else{
+            return super.collectionView(collectionView, cellForItemAt: indexPath)
+        }
+        
+    }
+
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+        if indexPath.section == 1 {
+            return CGSize(width: KNormalItemW, height: KPrettyItemH)
+        }
+        return CGSize(width: KNormalItemW, height: KNormalItemH)
+    }
+
+
+}
+
+
+
+    

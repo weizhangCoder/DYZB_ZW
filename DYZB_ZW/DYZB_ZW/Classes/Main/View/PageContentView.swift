@@ -109,6 +109,7 @@ extension PageContentView : UICollectionViewDelegate{
         //右滑
             progress  = 1 - (currentOffssetX / scrollViewW - floor(currentOffssetX / scrollViewW))
             
+            //向右滑动这个获取的就是目标index
             targetIndex = Int(currentOffssetX / scrollViewW)
             
             // 3.计算sourceIndex
