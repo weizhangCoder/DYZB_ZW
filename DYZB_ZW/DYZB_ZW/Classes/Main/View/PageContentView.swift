@@ -19,6 +19,7 @@ class PageContentView: UIView {
     fileprivate var childVcs : [UIViewController]
     fileprivate weak var parentViewController : UIViewController?
     fileprivate var startOffsetX : CGFloat = 0
+    fileprivate var isForbidScrollDelegate : Bool = false//这个是保证下面的collection没有主动滑动的时候不走代理
     weak var delegate : PageContentViewDelegate?
     
     //// MARK:- 懒加载Collotenction
@@ -31,6 +32,7 @@ class PageContentView: UIView {
         
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collectionView.showsVerticalScrollIndicator = false
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.isPagingEnabled = true
         collectionView.bounces = false
         collectionView.delegate = self as UICollectionViewDelegate?
@@ -72,12 +74,13 @@ extension PageContentView{
 extension PageContentView : UICollectionViewDelegate{
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        isForbidScrollDelegate = false
         startOffsetX = scrollView.contentOffset.x
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        
+        if isForbidScrollDelegate {return}
         let currentOffssetX = scrollView.contentOffset.x
         let scrollViewW = scrollView.bounds.width
         var progress : CGFloat = 0
@@ -148,6 +151,7 @@ extension PageContentView : UICollectionViewDataSource {
 
 extension PageContentView {
     func setCurrentIndex(_ currentIndex : Int){
+        isForbidScrollDelegate = true
         let offsetX = CGFloat(currentIndex) * collectionView.frame.width
         collectionView.setContentOffset(CGPoint(x:offsetX,y:0), animated: false)
     

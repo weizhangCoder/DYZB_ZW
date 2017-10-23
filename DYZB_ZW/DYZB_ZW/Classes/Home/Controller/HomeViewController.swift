@@ -91,6 +91,7 @@ extension HomeViewController :PageTitleViewDelegate{
 
     func pageTitleView(_ titleView: PageTitleView, selectedIndex: Int) {
         print(titleView,selectedIndex)
+        
         pageContentView.setCurrentIndex(selectedIndex)
     }
 

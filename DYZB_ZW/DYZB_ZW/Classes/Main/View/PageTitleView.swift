@@ -98,7 +98,6 @@ extension PageTitleView {
             //给label 添加手势
             label.isUserInteractionEnabled = true
             let tapGes = UITapGestureRecognizer(target: self, action: #selector(self.titleLabelClick(_:)))
-            
             label.addGestureRecognizer(tapGes)
             
         }
@@ -137,10 +136,8 @@ extension PageTitleView{
         let oldLabel = titleLables[currentIndex]
         
         // 3.切换文字的颜色
-        currentLabel.textColor = RGBCOLOR(r: 255, 128, 0)
-        
-        oldLabel.textColor = RGBCOLOR(r: 85, 85, 85)
-
+        currentLabel.textColor = RGBCOLOR(r: kSelectColor.0, kSelectColor.1, kSelectColor.2)
+        oldLabel.textColor = RGBCOLOR(r: kNormalColor.0, kNormalColor.1, kNormalColor.2)
         //4,.保存最新的下标
         currentIndex = currentLabel.tag;
         //5滚动条改变
