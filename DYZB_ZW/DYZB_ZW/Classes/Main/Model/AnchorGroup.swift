@@ -9,6 +9,7 @@
 import UIKit
 
 class AnchorGroup: BaseGameModel {
+    
     var room_list :[[String : NSObject]]?{
         
         didSet{
@@ -25,9 +26,7 @@ class AnchorGroup: BaseGameModel {
     
     }
     
-    
-    
-    
+
     var icon_name : String = "home_header_normal"
     
     lazy var anchors : [AnchorModel] = [AnchorModel]()

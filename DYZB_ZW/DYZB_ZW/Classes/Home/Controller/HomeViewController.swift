@@ -10,7 +10,7 @@ import UIKit
 
 private var KTitleViewH : CGFloat = 40
 
-class HomeViewController: BaseViewController {
+class HomeViewController: UIViewController {
     //懒加载
     fileprivate lazy var pageTitleView :PageTitleView = {[weak self] in
         let titleFrame = CGRect(x: 0, y:0, width: KscreenW, height: KTitleViewH)

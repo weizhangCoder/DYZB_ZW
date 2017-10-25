@@ -23,6 +23,8 @@ let KPrettyItemH = KNormalItemW * 4/3
 
 
 class BaseAnchorViewController: BaseViewController {
+    
+    var baseVM : BaseViewModel!
     lazy var collectionView : UICollectionView = { [unowned self] in
         let layout  = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
@@ -44,62 +46,60 @@ class BaseAnchorViewController: BaseViewController {
         return collectionView
     }()
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI()
-        // Do any additional setup after loading the view.
+        loadData()
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
 
 extension BaseAnchorViewController{
     
-    func setupUI(){
+    override func setupUI(){
+
         
         view.addSubview(collectionView)
         
+      
+        super.setupUI()
     }
     
+    
+}
+extension BaseAnchorViewController{
+    
+    func loadData()  {
+        
+    }
     
 }
 
 // MARK:- 总收协议
 extension BaseAnchorViewController : UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 6
+        return baseVM.anchorGroups.count
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return baseVM.anchorGroups[section].anchors.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! CollectionNormalCell
         
-        
+        cell.anchor = baseVM.anchorGroups[indexPath.section].anchors[indexPath.item]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath)
-        
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! CollectionHeaderView
+        headerView.group = baseVM.anchorGroups[indexPath.section]
         return headerView
     }
 }

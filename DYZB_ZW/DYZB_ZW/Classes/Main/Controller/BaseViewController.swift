@@ -15,22 +15,18 @@ class BaseViewController: UIViewController {
         automaticallyAdjustsScrollViewInsets = false
         navigationController?.navigationBar.isTranslucent = false
         view.backgroundColor = UIColor.hexInt(0xf3f3f3)
+        
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+   
+
+}
+
+
+extension BaseViewController{
+    func setupUI(){
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
