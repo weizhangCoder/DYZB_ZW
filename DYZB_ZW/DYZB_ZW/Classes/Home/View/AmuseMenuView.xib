@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="IWL-VQ-jt7" customClass="AmuseMenuView" customModule="DYZB_ZW" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="J92-ez-osQ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="168"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="0Q1-dD-Xpv">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="IWL-VQ-jt7" id="dkW-48-znE"/>
+                        <outlet property="delegate" destination="IWL-VQ-jt7" id="y0p-J4-MsZ"/>
+                    </connections>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="QwM-uk-xSR">
+                    <rect key="frame" x="0.0" y="168" width="375" height="37"/>
+                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="QwM-uk-xSR" firstAttribute="leading" secondItem="Hm5-7h-qNc" secondAttribute="leading" id="6qn-dC-0hX"/>
+                <constraint firstItem="Hm5-7h-qNc" firstAttribute="trailing" secondItem="QwM-uk-xSR" secondAttribute="trailing" id="Cgp-UZ-Zbc"/>
+                <constraint firstItem="J92-ez-osQ" firstAttribute="leading" secondItem="Hm5-7h-qNc" secondAttribute="leading" id="Hpm-bO-kQX"/>
+                <constraint firstItem="QwM-uk-xSR" firstAttribute="top" secondItem="J92-ez-osQ" secondAttribute="bottom" id="KfT-UM-2GC"/>
+                <constraint firstItem="Hm5-7h-qNc" firstAttribute="trailing" secondItem="J92-ez-osQ" secondAttribute="trailing" id="WeH-C8-EH1"/>
+                <constraint firstItem="J92-ez-osQ" firstAttribute="top" secondItem="Hm5-7h-qNc" secondAttribute="top" id="XBb-IK-pYg"/>
+                <constraint firstItem="Hm5-7h-qNc" firstAttribute="bottom" secondItem="QwM-uk-xSR" secondAttribute="bottom" constant="-5" id="fLL-Vz-MI1"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Hm5-7h-qNc"/>
+            <connections>
+                <outlet property="collectionView" destination="J92-ez-osQ" id="O0c-Em-TC5"/>
+                <outlet property="pageControl" destination="QwM-uk-xSR" id="0uF-6R-q48"/>
+            </connections>
+            <point key="canvasLocation" x="-90" y="110"/>
+        </view>
+    </objects>
+</document>

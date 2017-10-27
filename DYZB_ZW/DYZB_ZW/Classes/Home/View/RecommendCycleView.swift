@@ -37,7 +37,6 @@ class RecommendCycleView: UIView {
         //注册cell
         collectionView.register(UINib(nibName: "CollectionCycleCell", bundle: nil), forCellWithReuseIdentifier: kCycleCellID)
         
-        collectionView.backgroundColor = UIColor.red
     }
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -80,10 +79,12 @@ extension RecommendCycleView :UICollectionViewDelegate{
         pageControl.currentPage = Int(offsetX/scrollView.bounds.width) % (cycleModels?.count ?? 1)
     }
     
+
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         removerCycleTimer()
     }
-    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         addCycleTimer()
     }
     
