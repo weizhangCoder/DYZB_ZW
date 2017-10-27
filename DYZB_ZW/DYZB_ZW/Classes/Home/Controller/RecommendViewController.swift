@@ -24,6 +24,11 @@ class RecommendViewController: BaseAnchorViewController{
         gameView.frame = CGRect(x: 0, y: -kGameViewH, width: KscreenW, height: kGameViewH)
         return gameView
     }()
+    fileprivate lazy var cycleView : RecommendCycleView = {
+       let cycleView = RecommendCycleView.recommendCycleView()
+        cycleView.frame = CGRect(x: 0, y:  -(kCycleViewH + kGameViewH), width: KscreenW, height: kCycleViewH)
+        return cycleView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,9 +41,11 @@ class RecommendViewController: BaseAnchorViewController{
 }
 extension RecommendViewController{
     override func setupUI() {
+         // 1.先调用super.setupUI()
         super.setupUI()
         
-        
+        // 2.将CycleView添加到UICollectionView中
+        collectionView.addSubview(cycleView)
         // 3.将gameView添加collectionView中
         collectionView.addSubview(gameView)
         // 4.设置collectionView的内边距
@@ -65,8 +72,11 @@ extension RecommendViewController{
             groups.append(moreGroup)
             
             self.gameView.groups = groups;
-//
+
             
+        }
+        recommenfVM.requestCycleData {
+            self.cycleView.cycleModels = self.recommenfVM.cycleModels
         }
     }
     

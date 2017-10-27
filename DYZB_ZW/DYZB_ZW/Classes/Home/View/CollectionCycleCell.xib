@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lDs-ow-BKX" customClass="CollectionCycleCell" customModule="DYZB_ZW" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="314" height="152"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="314" height="152"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="Qa3-nf-ty6">
+                        <rect key="frame" x="0.0" y="0.0" width="314" height="152"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YXh-24-dvg">
+                        <rect key="frame" x="0.0" y="122" width="314" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="小码哥IT教育" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85F-BD-amC">
+                                <rect key="frame" x="15" y="7" width="77" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="85F-BD-amC" firstAttribute="centerY" secondItem="YXh-24-dvg" secondAttribute="centerY" id="QkJ-yi-J5G"/>
+                            <constraint firstAttribute="height" constant="30" id="yLF-jb-D76"/>
+                            <constraint firstItem="85F-BD-amC" firstAttribute="leading" secondItem="YXh-24-dvg" secondAttribute="leading" constant="15" id="zKS-uJ-dzh"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="YXh-24-dvg" secondAttribute="bottom" id="8lz-w4-1tM"/>
+                <constraint firstAttribute="trailing" secondItem="Qa3-nf-ty6" secondAttribute="trailing" id="HoR-rM-HFA"/>
+                <constraint firstItem="Qa3-nf-ty6" firstAttribute="leading" secondItem="lDs-ow-BKX" secondAttribute="leading" id="X5R-W9-QTT"/>
+                <constraint firstAttribute="trailing" secondItem="YXh-24-dvg" secondAttribute="trailing" id="bVO-sL-8hj"/>
+                <constraint firstItem="Qa3-nf-ty6" firstAttribute="top" secondItem="lDs-ow-BKX" secondAttribute="top" id="c6c-ws-2M1"/>
+                <constraint firstAttribute="bottom" secondItem="Qa3-nf-ty6" secondAttribute="bottom" id="imI-cM-iSa"/>
+                <constraint firstItem="YXh-24-dvg" firstAttribute="leading" secondItem="lDs-ow-BKX" secondAttribute="leading" id="kHY-Ir-TkS"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="13h-9l-TL5"/>
+            <size key="customSize" width="314" height="152"/>
+            <connections>
+                <outlet property="iconImageView" destination="Qa3-nf-ty6" id="Bmv-Ka-Q7B"/>
+                <outlet property="titleLabel" destination="85F-BD-amC" id="f7f-dg-C3D"/>
+            </connections>
+            <point key="canvasLocation" x="372" y="145"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Img_default" width="172" height="103"/>
+    </resources>
+</document>
