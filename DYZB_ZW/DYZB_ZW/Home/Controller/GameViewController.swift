@@ -66,6 +66,8 @@ class GameViewController: BaseViewController {
 extension GameViewController{
     override func setupUI() {
         
+        // 0.给ContentView进行赋值
+        contentView = collectionView
         // 1.添加UICollectionView
         view.addSubview(collectionView)
         // 2.添加顶部的HeaderView

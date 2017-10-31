@@ -64,6 +64,8 @@ extension BaseAnchorViewController{
     
     override func setupUI(){
 
+        // 1.给父类中内容View的引用进行赋值
+        contentView = collectionView
         
         view.addSubview(collectionView)
         
