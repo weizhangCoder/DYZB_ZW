@@ -202,6 +202,7 @@
 		7298961B1DF7A63300D7FEB2 /* DYZB_ZW */ = {
 			isa = PBXGroup;
 			children = (
+				72D9E2931F28705000FED4A4 /* Home */,
 				72D9E2701F28468C00FED4A4 /* Classes */,
 				7298961C1DF7A63300D7FEB2 /* AppDelegate.swift */,
 				7298961E1DF7A63300D7FEB2 /* ViewController.swift */,
@@ -215,7 +216,6 @@
 		72D9E2701F28468C00FED4A4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				72D9E2931F28705000FED4A4 /* Home */,
 				72D9E2711F28468C00FED4A4 /* Follow */,
 				72D9E2761F28468C00FED4A4 /* Live */,
 				72D9E27B1F28468C00FED4A4 /* Main */,
@@ -531,8 +531,7 @@
 				TargetAttributes = {
 					729896181DF7A63300D7FEB2 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = KVL9QB8ZBZ;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -794,12 +793,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = KVL9QB8ZBZ;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DYZB_ZW/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jyall.DYZB-ZW";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -810,12 +811,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = KVL9QB8ZBZ;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DYZB_ZW/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jyall.DYZB-ZW";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

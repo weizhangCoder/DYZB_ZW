@@ -72,6 +72,10 @@ extension RecommendViewController{
             groups.append(moreGroup)
             
             self.gameView.groups = groups;
+            //3.消失动画 请求数据完成
+            self.loadDataFinished()
+            
+        
 
             
         }

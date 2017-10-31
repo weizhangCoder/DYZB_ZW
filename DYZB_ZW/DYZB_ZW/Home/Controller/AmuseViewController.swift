@@ -50,6 +50,9 @@ extension AmuseViewController{
             tempGroups.removeFirst()
             self.amuseView.groups = tempGroups
             
+            //3.消失动画 请求数据完成
+            self.loadDataFinished()
+            
         }
         
     }

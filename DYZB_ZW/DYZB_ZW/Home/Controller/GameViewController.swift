@@ -88,6 +88,8 @@ extension GameViewController{
                // 2.展示常用游戏
             self.gameView.groups = Array(self.gameVM.games[0..<10])
             
+            //3.消失动画 请求数据完成
+            self.loadDataFinished()
         }
         
     }
