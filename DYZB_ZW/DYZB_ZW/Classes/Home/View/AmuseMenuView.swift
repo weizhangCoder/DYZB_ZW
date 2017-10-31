@@ -26,7 +26,7 @@ class AmuseMenuView: UIView {
         super.awakeFromNib()
         
         collectionView.register(UINib(nibName: "AmuseMenuViewCell", bundle: nil), forCellWithReuseIdentifier: kMenuCellID)
-        pageControl.isHidden = false
+        pageControl.isHidden = true
     }
     
     override func layoutSubviews() {
