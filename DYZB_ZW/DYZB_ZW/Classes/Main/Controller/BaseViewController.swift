@@ -30,7 +30,7 @@ class BaseViewController: UIViewController {
         navigationController?.navigationBar.isTranslucent = false
         view.backgroundColor = UIColor.hexInt(0xf3f3f3)
         
-        
+        setupUI()
     }
 
    

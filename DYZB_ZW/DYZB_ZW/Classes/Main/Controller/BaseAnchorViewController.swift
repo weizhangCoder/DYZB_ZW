@@ -109,6 +109,21 @@ extension BaseAnchorViewController : UICollectionViewDataSource {
 extension BaseAnchorViewController : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let anchor = baseVM.anchorGroups[indexPath.section].anchors[indexPath.item]
+        
+       anchor.isVertical == 0 ? pushNormalRoomVc() : presentShowRoomVc()
+
+    }
+    
+    private func presentShowRoomVc(){
+        let showRoomVc = RoomShowViewController()
+        
+        present(showRoomVc, animated: true, completion: nil)
+    }
+    private func pushNormalRoomVc(){
+        let normolRoomVc = RoomNormalViewController()
+        navigationController?.pushViewController(normolRoomVc, animated: true)
+        
         
     }
     
